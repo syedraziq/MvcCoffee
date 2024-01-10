@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Browse Catalog";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Catalog</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url("images/Browsebg.png")
+        }
+
+        .catalog-container {
+            max-width: 1200px;
+            max-height: 90%;
+            margin: 20px auto;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        
+
+        .item {
+            display: flex;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.0);
+            ;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: black;
+        }
+
+            .item img {
+                max-width: 10%;
+                height: auto;
+                border-radius: 5px;
+                margin-right: 20px;
+            }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .item-description {
+            color: black;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="catalog-container">
+        <a href="/CoffeesF" class="item">
+            <img src="~/Images/Coffeeitem.jpg" alt="Item 1">
+            <div class="item-details">
+                <div class="item-title">Coffee</div>
+                <div class="item-description">Browse into our coffee selection you desire.</div>
+            </div>
+        </a>
+
+        <a href="/TeaF" class="item">
+            <img src="~/Images/Teaitem.jpg" alt="Item 2">
+            <div class="item-details">
+                <div class="item-title">Tea</div>
+                <div class="item-description">Browse into our relaxing tea selections.</div>
+            </div>
+        </a>
+
+        <a href="DessertF" class="item">
+            <img src="~/Images/CakeItem.jpg" alt="Item 3">
+            <div class="item-details">
+                <div class="item-title">Dessert</div>
+                <div class="item-description">Browse into our delightful sweet desserts just like you.</div>
+            </div>
+        </a>
+    </div>
+
+</body>
+
+</html>

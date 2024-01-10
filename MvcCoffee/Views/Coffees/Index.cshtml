@@ -1,0 +1,129 @@
+﻿@model IEnumerable<MvcCoffee.Models.Coffee>
+
+@{
+    ViewData["Title"] = "Coffee Menu";
+}
+
+<style>
+    body {
+        background-image: url("path/to/your/background-photo.jpg");
+        background-color: #D2B48C;
+        background-size: cover;
+        background-position: center;
+        color: white; /* Set text color to white for better visibility on a background image */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        border-bottom: 2px solid #fff; /* Add a border under the heading */
+        padding-bottom: 10px;
+    }
+
+    table {
+        border: 3px solid #fff; /* Make the table border thicker */
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 2px solid #fff; /* Make the cell borders thicker */
+        padding: 10px;
+        text-align: left;
+    }
+
+    .action-links a {
+        display: inline-block;
+        padding: 8px 12px;
+        margin-right: 10px;
+        background-color: #A74D25;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+        .action-links a:hover {
+            background-color: #83401C;
+        }
+
+    .navigation-links {
+        margin-top: 20px;
+    }
+
+        .navigation-links a {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-right: 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .navigation-links a:hover {
+                background-color: #555;
+            }
+</style>
+
+<div class="container">
+    <h1>Coffee Menu</h1>
+
+    <p class="action-links">
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descriptions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stock)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descriptions)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Stock)
+                    </td>
+                    <td class="action-links">
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p class="navigation-links">
+        <a asp-action="Index" asp-controller="Dessert">Go to Dessert Page</a> |
+        <a asp-action="Index" asp-controller="Tea">Go to Tea Page</a>
+    </p>
+</div>

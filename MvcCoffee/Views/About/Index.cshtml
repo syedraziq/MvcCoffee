@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("images/aboutbg.png");
+        }
+
+        .about-container {
+            position: fixed;
+            bottom: 110px;
+            left: 10px;
+            bottom: 310px;
+            max-width:700px;
+            margin:20px;
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+
+        h2 {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            color: #666;
+            max-width: 1000px;
+            margin-bottom: 40px;
+            font-size:25px;
+        }
+
+        .social-media {
+            position: fixed;
+            bottom: 300px;
+            left: 30px;
+            display: flex;
+            gap: 20px;
+
+        }
+
+            .social-media a {
+                text-decoration: none;
+                color: white;
+
+            }
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <h2>About Us</h2>
+        <div class="about-text">
+            <p>
+                Founded in 2020, Delulu N Coffee is a haven for connoisseurs seeking a harmonious blend of exquisite coffee, fine teas, and delectable desserts. Nestled in the heart of Kuala Lumpur, our establishment is more than just a coffee shop, it's a destination where craftsmanship meets comfort.
+
+            </p>
+            <p>
+                Beyond being a purveyor of exceptional beverages and desserts, Delulu N Coffee is a space for interactive experiences. Join us for live coffee brewing sessions, tea tastings, and dessert pairings led by our skilled baristas and chefs.
+            </p>
+        </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+
+</body>
+</html>
